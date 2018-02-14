@@ -1,0 +1,11 @@
+commit 152ad3c197bd829e53bc14d36e059487be40ea7c (HEAD -> master)
+Author: Katsura Aleksey <aleksey.2999@gmail.com>
+Date:   Thu Feb 15 00:53:26 2018 +0300
+
+    add status.txt
+
+commit 8d1f63a2b31b499417763a3d8f468b75ed803c71
+Author: Katsura Aleksey <aleksey.2999@gmail.com>
+Date:   Thu Feb 15 00:52:18 2018 +0300
+
+    add .gitignore

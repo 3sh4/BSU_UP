@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background: #edeef0;
+    font-family: "Segoe UI", sans-serif;
+    min-width: 400px;
+    height: 100%;
+    min-height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-line{
+    height: 42px;
+    background-color: #265aa8;
+    width: 100%;
+    position: relative;
+}
+
+.logo{
+    margin-left: 125px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.add-photo{
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
+}
+
+.user-info{
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 7px;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.user-block{
+    float:right;
+    display: block;
+    margin-right: 120px;
+}
+
+.logout-btn {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 7px;
+    vertical-align: top;
+    padding-left: 25px;
+}
+
+
+.filter {
+    position: fixed;
+    right: 0;
+    margin: 8px;
+    width: 20%;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    border: thin solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.filter-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.filter-header {
+    float: left;
+    font-size: 11pt;
+    font-weight: 500;
+}
+
+.filter input{
+    width: 100%;
+    margin-top: 7px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+}
+
+.filter input:focus{
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+
+.filter-button {
+    background-color: #5B88BD;
+    border: none;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+
+.post {
+    margin: 8px;
+    width: 40%;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    border: thin solid black;
+}
+
+.post-header {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.post-author {
+    color: #394c83;
+    font-size: 18pt;
+    font-weight: 700;
+}
+
+.post-date{
+    color: #394c83;
+    font-size: 10pt;
+    font-weight: 400;
+}
+
+.post-content {
+    width: 90%;
+    height: 70%;
+    border-radius: 0 0 10px 10px;
+    border: thin solid #95A4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 20px  ;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+}
+
+.photo{
+    width: 100%;
+    height: 100%;
+}
+
+.post-actions {
+    width: 100%;
+}
+
+.post-likes{
+    cursor: pointer;
+    float: left;
+    margin-left: 15px;
+}
+
+.like-icon {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+
+.like-text {
+    font-size: 10pt;
+    display: inline-block;
+    vertical-align: middle;
+    color: #315B8C;
+    font-weight: 500;
+}
+
+.post-description {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.description-text {
+    float: left;
+    margin-left: 15px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 200px;
+    color: #394c83;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+
+.post-hashtags {
+    margin-left: 15px;
+}
+
+
+.hashtags-wrapper {
+    width: 100%;
+
+    margin-bottom: 15px;
+}
+
+
+.hashtag {
+    float: left;
+    display: inline-block;
+
+    font-size: 12pt;
+    color: #6f85c4;
+    font-weight: 400;
+    padding-right: 4px;
+}
+
+.footer {
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D8E2E9;
+}
+
+.portal-name {
+    font-size: medium;
+    text-align: center;
+    color: #777777;
+}
+
+.portal-change-date {
+    font-size: small;
+    color: #777777;
+}
+
+.author-name {
+    font-size: small;
+    color: #777777;
+    padding-left: 5px;
+}
+
+.author-email {
+    font-size: small;
+    color: #777777;
+    padding-right: 5px;
+}

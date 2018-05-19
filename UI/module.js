@@ -1,14 +1,24 @@
 var Module = (function () {
 
+    //Data
+    var user = {
+        name:'Алексей',
+        id:'162'
+    };
+
+    var currentFilter = {};
+
+    var displayed = 0;
+
     var photoPosts = [
         {
             id: '1',
             authorId: '1',
-            description: '♥',
-            createdAt: new Date('2018-08-23T23:00:00'),
+            description: 'Loremitaque minus molestias nemo quasi voluptates. Eum, ipsam non nulla quod quos voluptatem? Adipisci alias commodi dolorem exercitationem repellat! Architecto atque consequuntur eaque ex id in ipsum iste maxime natus nemo nesciunt non quis, quisquam quos sed tempora totam. Ab ad cupiditate dolorum earum eligendi fugit harum impedit in magnam maiores molestiae natus, nihil non, placeat quod repellat repudiandae temporibus ut? Blanditiis commodi consequatur delectus distinctio incidunt modi nihil placeat quis tempore, temporibus. Aut doloribus dolorum inventore minus neque reprehenderit, sit?',
+            createdAt: new Date('2006-08-23T23:00:00'),
             authorName: 'ArtHome',
             photoLink: 'img/photos/photo1.jpg',
-            whoLiked: ['Kaiska'],
+            whoLiked: ['Kaiska', 'h54', '5h454h54', 'h'],
             likedIt: true,
             hashtags: ['art', 'me']
         },
@@ -47,7 +57,7 @@ var Module = (function () {
         },
         {
             id: '5',
-            authorId: '13525325',
+            authorId: '162',
             description: 'bla bla BLA',
             createdAt: new Date('2018-08-11T23:00:00'),
             authorName: '507',
@@ -106,19 +116,34 @@ var Module = (function () {
             description: 'xrxdcftgvbhj',
             createdAt: new Date('2018-08-23T23:00:00'),
             authorName: 'ArtHome',
-            photoLink: 'img/photos/photo1.jpg',
+            photoLink: 'img/photos/photo10.jpg',
             whoLiked: ['Kaiska'],
             likedIt: true,
             hashtags: ['art']
         }
     ];
 
-    var getPhotoPosts = function (skip = 0, top = 0, filterConfig = {}) {
-        let filtered = photoPosts.filter((post) => checkForFilter(filterConfig, post));
-
-        return filtered.slice(skip, top + skip);
+    var getUser = function () {
+        return user;
     };
 
+    var getFilter = function () {
+        return currentFilter;
+    };
+
+    var setFilter = function (filter) {
+        currentFilter = filter;
+    };
+
+    var getDisplayedCount = function () {
+        return displayed;
+    };
+
+    var setDisplayedCount = function (count) {
+        displayed = count;
+    };
+
+    //Functions
     function checkForFilter(filter, post) {
         if (!!filter['author'] && post.authorName !== filter['author'])
             return false;
@@ -131,6 +156,18 @@ var Module = (function () {
 
         return true;
     }
+
+
+    //Public functions
+    var getPhotoPosts = function (skip = 0, top = 10, filterConfig = {}) {
+        let filtered = photoPosts.filter((post) => checkForFilter(filterConfig, post));
+
+        filtered.sort(function (a, b) {
+            return a.createdAt - b.createdAt;
+        });
+
+        return filtered.slice(skip, top + skip);
+    };
 
     var removePhotoPost = function (id) {
         let ind = photoPosts.findIndex(function (el) {
@@ -206,6 +243,7 @@ var Module = (function () {
         return true;
     };
 
+    //Valid checkers
     function checkId(id) {
         return typeof id === 'string' && id.trim().length > 0;
     }
@@ -257,7 +295,7 @@ var Module = (function () {
         console.log(validatePhotoPost(getPhotoPost('1')));
 
         console.log('random:');
-        console.log(validatePhotoPost({author : 3}));
+        console.log(validatePhotoPost({author: 3}));
 
         console.log('--------------------');
 
@@ -292,18 +330,18 @@ var Module = (function () {
         console.log('--------------------');
 
         console.log('1,3,{author:\'ArtHome\'} :')
-        console.log(getPhotoPosts(1,3,{author:'ArtHome'}));
+        console.log(getPhotoPosts(1, 3, {author: 'ArtHome'}));
 
         console.log('2,2,{fromDate:new Date(\'2018-08-23T23:00:00\')}:');
-        console.log(getPhotoPosts(2,2,{fromDate:new Date('2018-08-23T23:00:00')}));
+        console.log(getPhotoPosts(2, 2, {fromDate: new Date('2018-08-23T23:00:00')}));
 
         console.log('0,4,{hashTags:[\'art\']}');
-        console.log(getPhotoPosts(0,4,{hashTags:['art']}));
+        console.log(getPhotoPosts(0, 4, {hashTags: ['art']}));
 
         console.log('--------------------');
     }
 
-    testMethods();
+    // testMethods();
 
 
     return {
@@ -312,7 +350,12 @@ var Module = (function () {
         getPhotoPost: getPhotoPost,
         addPhotoPost: addPhotoPost,
         editPhotoPost: editPhotoPost,
-        getPhotoPosts: getPhotoPosts
+        getPhotoPosts: getPhotoPosts,
+        getUser: getUser,
+        getFilter: getFilter,
+        setFilter: setFilter,
+        getDisplayedCount: getDisplayedCount,
+        setDisplayedCount: setDisplayedCount
     }
 
 }());

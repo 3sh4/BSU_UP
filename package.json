@@ -1,0 +1,22 @@
+{
+  "name": "bsu_up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app,js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3sh4/BSU_UP.git"
+  },
+  "author": "3sh4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3sh4/BSU_UP/issues"
+  },
+  "homepage": "https://github.com/3sh4/BSU_UP#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

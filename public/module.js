@@ -6,20 +6,23 @@ var Module = (function () {
         id:'162'
     };
 
-    var currentFilter = {};
+    var rightLoginData = {
+        login:'123@yandex.ru',
+        password:'12345'
+    };
 
-    var displayed = 0;
+    var currentFilter = {};
 
     var photoPosts = [
         {
             id: '1',
-            authorId: '1',
+            authorId: '162',
             description: 'Loremitaque minus molestias nemo quasi voluptates. Eum, ipsam non nulla quod quos voluptatem? Adipisci alias commodi dolorem exercitationem repellat! Architecto atque consequuntur eaque ex id in ipsum iste maxime natus nemo nesciunt non quis, quisquam quos sed tempora totam. Ab ad cupiditate dolorum earum eligendi fugit harum impedit in magnam maiores molestiae natus, nihil non, placeat quod repellat repudiandae temporibus ut? Blanditiis commodi consequatur delectus distinctio incidunt modi nihil placeat quis tempore, temporibus. Aut doloribus dolorum inventore minus neque reprehenderit, sit?',
             createdAt: new Date('2006-08-23T23:00:00'),
             authorName: 'ArtHome',
             photoLink: 'img/photos/photo1.jpg',
             whoLiked: ['Kaiska', 'h54', '5h454h54', 'h'],
-            likedIt: true,
+            likedIt: false,
             hashtags: ['art', 'me']
         },
         {
@@ -41,7 +44,7 @@ var Module = (function () {
             authorName: 'KeyArtGroup',
             photoLink: 'img/photos/photo3.jpg',
             whoLiked: ['KeyAd'],
-            likedIt: true,
+            likedIt: false,
             hashtags: ['idk']
         },
         {
@@ -52,7 +55,7 @@ var Module = (function () {
             authorName: 'Smile',
             photoLink: 'img/photos/photo4.jpg',
             whoLiked: ['Me'],
-            likedIt: true,
+            likedIt: false,
             hashtags: [':c', ':D', 'smiles']
         },
         {
@@ -74,7 +77,7 @@ var Module = (function () {
             authorName: 'EmptyName',
             photoLink: 'img/photos/photo6.jpg',
             whoLiked: ['123', '1313131312'],
-            likedIt: true,
+            likedIt: false,
             hashtags: ['fefeffefe']
         },
         {
@@ -96,7 +99,7 @@ var Module = (function () {
             authorName: 'DY',
             photoLink: 'img/photos/photo8.jpg',
             whoLiked: ['fctgvbhjnkml,'],
-            likedIt: true,
+            likedIt: false,
             hashtags: ['xdrcftgvbhjn']
         },
         {
@@ -118,8 +121,118 @@ var Module = (function () {
             authorName: 'ArtHome',
             photoLink: 'img/photos/photo10.jpg',
             whoLiked: ['Kaiska'],
-            likedIt: true,
+            likedIt: false,
             hashtags: ['art']
+        },
+        {
+            id: '11',
+            authorId: '132',
+            description: 'water))0)',
+            createdAt: new Date('20013-11-29T22:00:00'),
+            authorName: 'ChiL',
+            photoLink: 'img/photos/photo11.jpg',
+            whoLiked: ['vesevs', '5h454h54', 'h'],
+            likedIt: false,
+            hashtags: ['water', 'htag']
+        },
+        {
+            id: '12',
+            authorId: '1353562',
+            description: 'Lovely nature',
+            createdAt: new Date('2012-11-20T23:00:00'),
+            authorName: 'Unnamed Photographer',
+            photoLink: 'img/photos/photo12.jpg',
+            whoLiked: ['Hello','me'],
+            likedIt: false,
+            hashtags: []
+        },
+        {
+            id: '13',
+            authorId: '13352',
+            description: 'Let\'s draw something really beautiful!',
+            createdAt: new Date('2008-11-03T23:00:00'),
+            authorName: 'KeyArtGroup',
+            photoLink: 'img/photos/photo13.jpg',
+            whoLiked: ['qdwqd','3f22f2'],
+            likedIt: false,
+            hashtags: ['red','brush']
+        },
+        {
+            id: '14',
+            authorId: '124124',
+            description: 'Rainbow)',
+            createdAt: new Date('2019-08-23T23:00:00'),
+            authorName: 'Qer',
+            photoLink: 'img/photos/photo14.jpg',
+            whoLiked: ['Me','qe'],
+            likedIt: false,
+            hashtags: ['rainbow']
+        },
+        {
+            id: '15',
+            authorId: '162',
+            description: 'Fly!',
+            createdAt: new Date('2018-08-16T23:00:00'),
+            authorName: '507',
+            photoLink: 'img/photos/photo15.jpg',
+            whoLiked: [],
+            likedIt: false,
+            hashtags: []
+        },
+        {
+            id: '16',
+            authorId: '7897',
+            description: 'Small fire in our hearts',
+            createdAt: new Date('2012-10-04T23:00:00'),
+            authorName: 'EmptyName',
+            photoLink: 'img/photos/photo16.jpg',
+            whoLiked: ['me', '1313131312'],
+            likedIt: false,
+            hashtags: ['fefeffefe']
+        },
+        {
+            id: '17',
+            authorId: '1',
+            description: 'Look to the sky',
+            createdAt: new Date('2010-04-23T23:00:00'),
+            authorName: 'JapanYag',
+            photoLink: 'img/photos/photo17.jpg',
+            whoLiked: [],
+            likedIt: false,
+            hashtags: []
+        },
+        {
+            id: '18',
+            authorId: '1',
+            description: 'Mmm, delicious...',
+            createdAt: new Date('2011-02-23T23:00:00'),
+            authorName: 'DY',
+            photoLink: 'img/photos/photo18.jpg',
+            whoLiked: ['fctgvbhjnkml,'],
+            likedIt: false,
+            hashtags: ['xdrcftgvbhjn']
+        },
+        {
+            id: '19',
+            authorId: '1234567',
+            description: 'My bf',
+            createdAt: new Date('2009-08-23T23:00:00'),
+            authorName: 'Shaker',
+            photoLink: 'img/photos/photo19.jpg',
+            whoLiked: ['Kaiska'],
+            likedIt: false,
+            hashtags: ['zsxdfcgvbhjn']
+        },
+        {
+            id: '20',
+            authorId: '1345678',
+            description: 'Actually i don\'t like strawberry, but that\'s pretty nice' ,
+            createdAt: new Date('2010-12-23T23:00:00'),
+            authorName: 'ArtHome',
+            photoLink: 'img/photos/photo20.jpg',
+            whoLiked: ['Kaiska'],
+            likedIt: false,
+            hashtags: ['food','strawberry']
         }
     ];
 
@@ -135,12 +248,8 @@ var Module = (function () {
         currentFilter = filter;
     };
 
-    var getDisplayedCount = function () {
-        return displayed;
-    };
-
-    var setDisplayedCount = function (count) {
-        displayed = count;
+    var checkLoginData = function (data) {
+        return data.login === rightLoginData.login && data.password === rightLoginData.password;
     };
 
     //Functions
@@ -222,7 +331,7 @@ var Module = (function () {
         if (!!photoPost['id'] && checkId(photoPost.id))
             photoPosts[ind].id = photoPost.id;
 
-        if (!!photoPost['description'] && checkDescription(photoPost.description))
+        if (photoPost.hasOwnProperty('description') && checkDescription(photoPost.description))
             photoPosts[ind].description = photoPost.description;
 
         if (!!photoPost['createdAt'] && checkCreationDate(photoPost.createdAt))
@@ -239,6 +348,9 @@ var Module = (function () {
 
         if (!!photoPost['hashtags'] && checkHashtags(photoPost.hashtags))
             photoPosts[ind].hashtags = photoPost.hashtags;
+
+        if (photoPost.hasOwnProperty('likedIt') )
+            photoPosts[ind].likedIt = photoPost.likedIt;
 
         return true;
     };
@@ -354,8 +466,7 @@ var Module = (function () {
         getUser: getUser,
         getFilter: getFilter,
         setFilter: setFilter,
-        getDisplayedCount: getDisplayedCount,
-        setDisplayedCount: setDisplayedCount
+        checkLoginData: checkLoginData
     }
 
 }());

@@ -16,6 +16,7 @@ body {
     min-width: 400px;
     height: 100%;
     min-height: 100%;
+
 }
 
 header {
@@ -24,26 +25,26 @@ header {
     width: 100%;
 }
 
-.header-line{
+.header-line {
     height: 42px;
     background-color: #265aa8;
     width: 100%;
     position: relative;
 }
 
-.logo{
+.logo {
     margin-left: 125px;
     margin-top: 10px;
     display: inline-block;
 }
 
-.add-photo{
+.add-photo {
     margin-top: 10px;
     display: inline-block;
     width: auto;
 }
 
-.user-info{
+.user-info {
     color: #ffffff;
     display: inline-block;
     margin-top: 7px;
@@ -51,8 +52,8 @@ header {
     padding-left: 15px;
 }
 
-.user-block{
-    float:right;
+.user-block {
+    float: right;
     display: block;
     margin-right: 120px;
 }
@@ -67,7 +68,6 @@ header {
     cursor: pointer;
 }
 
-
 .filter {
     position: fixed;
     right: 0;
@@ -81,8 +81,8 @@ header {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
-
 
 .filter-block {
     margin-top: 10px;
@@ -96,24 +96,25 @@ header {
     font-weight: 500;
 }
 
-.filter input{
+.login-block input,
+.filter input {
     width: 100%;
     margin-top: 7px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    border:1px solid #BEBEBE;
+    border: 1px solid #BEBEBE;
     padding: 7px;
     transition: all 0.30s ease-in-out;
     outline: none;
 }
-
-.filter input:focus{
+.login-block input:focus,
+.filter input:focus {
     box-shadow: 0 0 8px #88D5E9;
     border: 1px solid #88D5E9;
 }
 
-
+.login-btn,
 .filter-button {
     background-color: #5B88BD;
     border: none;
@@ -128,14 +129,34 @@ header {
 }
 
 .content {
+    min-height: calc(100vh - 3em - 60px);
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 10px;
+    display: none;
 }
 
+.empty-content {
+}
+
+.load-more-button {
+    background-color: #5B88BD;
+    border: none;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    cursor: pointer;
+}
 
 .post {
     margin: 8px;
@@ -157,15 +178,16 @@ header {
     color: #394c83;
     font-size: 18pt;
     font-weight: 700;
+    cursor: pointer;
 }
 
-.post-date{
+.post-date {
     color: #394c83;
     font-size: 10pt;
     font-weight: 400;
 }
 
-.post-author-actions{
+.post-author-actions {
     display: inline-block;
     width: auto;
     float: right;
@@ -173,26 +195,30 @@ header {
     margin-top: 15px;
 }
 
-.post-edit-btn{
+.post-edit-done-btn,
+.post-edit-btn {
     display: inline-block;
     width: 21px;
     height: 21px;
     cursor: pointer;
 }
 
-.post-delete-btn{
+.post-delete-btn {
     display: inline-block;
     width: 25px;
     height: 25px;
     cursor: pointer;
 }
 
-.post-edit-btn-img{
+.post-edit-done-btn-img,
+.post-edit-btn-img {
     width: 100%;
     height: 100%;
 }
 
-.post-delete-btn-img{
+
+
+.post-delete-btn-img {
     width: 100%;
     height: 100%;
 }
@@ -209,7 +235,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
-    margin-bottom: 20px  ;
+    margin-bottom: 20px;
 }
 
 .post-image {
@@ -217,7 +243,7 @@ header {
     height: 100%;
 }
 
-.photo{
+.photo {
     width: 100%;
     height: 100%;
 }
@@ -226,7 +252,7 @@ header {
     width: 100%;
 }
 
-.post-likes{
+.post-likes {
     cursor: pointer;
     float: left;
     margin-left: 15px;
@@ -238,7 +264,6 @@ header {
     display: inline-block;
     vertical-align: middle
 }
-
 
 .like-text {
     font-size: 10pt;
@@ -266,18 +291,48 @@ header {
     font-size: 14pt;
 }
 
+.edit-post-description {
+    margin-left: 15px;
+    margin-right: 15px;
+    float: left;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 200px;
+    font-weight: 600;
+    font-size: 14pt;
+    width: calc(100% - 30px);
+    resize: vertical;
+    height: 125px;
+    color: #394c83;
+}
+
+.edit-post-hashtags{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    float: left;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 100px;
+    font-weight: 600;
+    font-size: 12pt;
+    width: calc(100% - 30px);
+    resize: vertical;
+    height: 50px;
+    color: #6f85c4;
+}
 
 .post-hashtags {
     margin-left: 15px;
 }
-
 
 .hashtags-wrapper {
     width: 100%;
 
     margin-bottom: 15px;
 }
-
 
 .hashtag {
     float: left;
@@ -287,10 +342,10 @@ header {
     color: #6f85c4;
     font-weight: 400;
     padding-right: 4px;
+    cursor: pointer;
 }
 
 .footer {
-    bottom: 0;
     height: 3em;
     width: 100%;
     display: flex;
@@ -321,4 +376,38 @@ header {
     font-size: small;
     color: #777777;
     padding-right: 5px;
+}
+
+
+.login-page{
+    margin-top: 50px;
+    height: calc(100vh - 3em - 50px);
+}
+
+.login-menu{
+
+    width: 20%;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: thin solid lightgray;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-block{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.login-header{
+    float: left;
+    font-size: 11pt;
+    font-weight: 500;
 }

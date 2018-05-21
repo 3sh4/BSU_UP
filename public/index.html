@@ -22,7 +22,7 @@
         <form>
             <div class="filter-header">Автор</div>
             <br>
-            <input type="text" name="authorfilter" title="Имя автора">
+            <input id="filter-author" type="text" name="authorfilter" title="Имя автора">
         </form>
     </div>
 
@@ -30,7 +30,7 @@
         <form>
             <div class="filter-header">Дата</div>
             <br>
-            <input type="date" name="fromdate" title="Дата">
+            <input id="filter-date" type="date" name="fromdate" title="Дата">
         </form>
     </div>
 
@@ -38,7 +38,7 @@
         <form>
             <div class="filter-header">Хэштеги</div>
             <br>
-            <input type="text" name="hashtagsfilter" title="Хэштеги">
+            <input id="filter-hashtags" type="text" name="hashtagsfilter" title="Хэштеги">
         </form>
     </div>
 
@@ -47,6 +47,25 @@
 
 <div class="content">
 
+</div>
+
+<div class="login-page">
+    <div class="login-menu">
+
+        <div class="login-block">
+            <div class="login-header">Логин/email</div>
+            <br>
+            <input id="login-email" type="text" name="fromdate" title="Дата">
+        </div>
+
+        <div class="login-block">
+            <div class="login-header">Пароль</div>
+            <br>
+            <input id="login-password" type="password" name="fromdate" title="Дата">
+        </div>
+
+        <button class="login-btn">Войти</button>
+    </div>
 </div>
 
 <div class="footer">
@@ -59,6 +78,7 @@
     </div>
     <p class="author-email">aleksey.2999@gmail.com</p>
 </div>
+
 <script src="module.js"></script>
 <script src="dom.js"></script>
 </body>

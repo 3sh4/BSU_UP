@@ -108,12 +108,14 @@ header {
     transition: all 0.30s ease-in-out;
     outline: none;
 }
+
 .login-block input:focus,
 .filter input:focus {
     box-shadow: 0 0 8px #88D5E9;
     border: 1px solid #88D5E9;
 }
 
+.create-post-button,
 .login-btn,
 .filter-button {
     background-color: #5B88BD;
@@ -140,6 +142,7 @@ header {
 }
 
 .empty-content {
+
 }
 
 .load-more-button {
@@ -215,8 +218,6 @@ header {
     width: 100%;
     height: 100%;
 }
-
-
 
 .post-delete-btn-img {
     width: 100%;
@@ -307,7 +308,7 @@ header {
     color: #394c83;
 }
 
-.edit-post-hashtags{
+.edit-post-hashtags {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 5px;
@@ -378,13 +379,13 @@ header {
     padding-right: 5px;
 }
 
-
-.login-page{
+.login-page {
     margin-top: 50px;
     height: calc(100vh - 3em - 50px);
+    display: none;
 }
 
-.login-menu{
+.login-menu {
 
     width: 20%;
     height: auto;
@@ -400,14 +401,93 @@ header {
     flex-direction: column;
 }
 
-.login-block{
+.login-block {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90%;
 }
 
-.login-header{
+.login-header {
     float: left;
     font-size: 11pt;
     font-weight: 500;
+}
+
+.create-post-page {
+    margin-top: 50px;
+    height: calc(100vh - 3em - 50px);
+}
+
+.create-post-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: thin solid lightgray;
+    height: 500px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-post-edit-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.create-post-photo-box {
+    background-color: #E8E8E8;
+    border-radius: 5px;
+    border: thin solid lightgray;
+    height: 90%;
+    margin: 20px;
+    width: 45%;
+}
+
+
+
+.create-post-info {
+    height: 90%;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.create-post-info-author {
+    color: #394c83;
+    font-size: 18pt;
+    font-weight: 700;
+    width: 100%;
+}
+
+.create-post-info-description{
+    width:100%;
+    height: 45%;
+    color: #394c83;
+    max-height: 200px;
+    font-weight: 600;
+    font-size: 14pt;
+    resize: none;
+}
+
+.create-post-info-hashtags{
+    width: 100%;
+    height: 35%;
+    resize: none;
+    color: #6f85c4;
+    font-weight: 600;
+    font-size: 12pt;
+}
+#123{
+    width: 100%;
+    height: 100%;
 }

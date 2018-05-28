@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "func-names": ["error", "never"],
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "globals": {
+    "Module": true
+  }
+}
